@@ -1,0 +1,31 @@
+/* Styling for about page */
+.page_content, #about_content, #about_head{margin: auto;}
+
+.page_content{
+    margin-top: 30px;
+    width: 80%;
+}
+
+#about_content{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#about_head{
+    width:max-content;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    #about_content{text-align: left;}
+    .page_content{width: 97%;}
+}
+
+/* Borders */
+/* .page_content{border: 2px solid purple;}
+#about_content {border: 2px solid red;}
+#about_head {border: 2px solid blue;} */

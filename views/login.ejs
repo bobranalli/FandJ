@@ -1,0 +1,182 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<style type="text/css">
+   body { background: #92c47d !important; }
+</style>
+
+<style>
+    #navbar{
+    	position: fixed;
+    	width: 100%;
+    	top: 0;
+    	padding-top: 7px;
+    	padding-bottom: 7px;
+    	color: #FFFFFF;
+    	background-color: #000000;
+    }
+
+    #navbar ul{
+    	list-style: none;
+    	padding: 0;
+    	margin: 0;
+    	display: flex;
+    }
+
+    #navbar a{
+    	text-decoration: none;
+    	color: #FFFFFF;
+    	font-weight: lighter;
+    	margin: 10px;
+    }
+
+    #navbar a:hover{
+    	text-decoration:underline;
+    }
+
+    #navbar li{
+    	display:inline;
+    	padding-bottom: 0px;
+    	list-style-type: none;
+    }
+
+    .texttabs{
+    	padding-left: 0px;
+    	padding-top: 30px;
+        padding-bottom: 15px;
+    	font-size: 25px;
+    	font-color: #FFFFFF;
+    }
+
+    .logo{
+    	padding-top: 15px;
+    	padding-left: 15px;
+        padding-right: 20px;
+        padding-bottom: 15px;
+    }
+
+    #navbar{z-index: 1;} /* adjusted for the extra images */
+    .block, .elem{display:flex;flex-direction: column;}
+    .block, .elem, .dot_container, #ticket-btn{margin:auto;}
+    .block{padding-bottom: 0px, margin-bottom: 0px;}
+    span{font-style: italic; font-weight: normal;}
+
+
+    body{
+    	margin: 0;
+    	padding: 0;
+    	font-size: 15px;
+    	font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .mt-6 {
+        margin-top: 8rem;
+    }
+
+    .mb-6 {
+        margin-bottom: 4rem;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .ml-6 {
+        position: fixed;
+        top: 38%;
+        left: 42%;
+        /* bring your own prefixes */
+        transform: translate(-30%, -35%);
+    }
+
+
+</style>
+
+<div class="row mt-6 mb-6">
+
+    <nav id='navbar' class="navbar">
+        <ul>
+          <div class="logo">
+              <li><img src ='/images/cab.png' height="50" /></li>
+          </div>
+        </ul>
+    </nav>
+
+  <div class="col-md-6 ml-6">
+    <div class="card card-body">
+
+      <h1 class="text-center mb-3">Login</h1>
+
+      <%- include('partials/messages'); %>
+      <form action="/users/login" method="POST">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Enter Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Login</button>
+      </form>
+      <p class="lead mt-4">
+        No Account? <a href="/users/register">Register</a>
+      </p>
+    </div>
+  </div>
+
+  <footer id="main-footer">
+      <div class="foot-block">
+          <div id="foot-address">
+              <ul>
+                  <li class="footertitle"><div class="small">copyright &copy; 2021 </div>cabbage.</li>
+              </ul>
+          </div>
+      </div>
+  </footer>
+</div>
+
+
+
+<style>
+    /* Styling for Page's footer: 2/3rd hidden on mobile */
+    #main-footer{
+        background-color:#000000;
+        color:#ffffff;
+        text-align:center;
+        margin-top: 0px;
+        padding-bottom:20px;
+        padding-top: 0px;
+        position:absolute;
+        bottom:0;
+        width:100%;
+
+    }
+
+    /* Remove all the default ul style in footer in each item */
+    #main-footer ul{
+        list-style:none;
+        padding:0;
+    }
+    .footertitle{
+        padding-top: 50px;
+        font-size: 25px;
+    }
+    .small{
+        font-size: 20px;
+    }
+
+</style>

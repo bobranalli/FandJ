@@ -1,0 +1,364 @@
+#navbar{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	color: #FFFFFF;
+	background-color: #000000;
+	overflow: hidden;
+}
+
+#navbar ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+#navbar a{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-weight: lighter;
+	margin: 10px;
+}
+
+#navbar a:hover{
+	text-decoration:underline;
+}
+
+#navbar li{
+	display:inline;
+	padding-bottom: 0px;
+	list-style-type: none;
+}
+
+.texttabs{
+	padding-left: 0px;
+	padding-top: 30px;
+	font-size: 25px;
+	font-color: #FFFFFF;
+}
+
+.logo{
+	padding-top: 15px;
+	padding-left: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+}
+
+
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	font-family: 'Josefin Sans', sans-serif;;
+}
+
+
+
+#showcase{
+    width: 100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    max-height:450px;
+    padding-bottom: 200px;
+    margin-bottom:0px;
+    /*padding-bottom: 0px;*/
+    text-align:center;
+}
+
+#showcase h1{
+    color:white;
+    font-size:80px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 70px;
+    background: rgba(00, 00, 00, 0.45);
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+
+/* The dots/bullets/indicators: Now Playing Section */
+.new_movie_back:hover, .new_movie_next:hover{
+    background-color: rgba(128, 0, 0, 0.5);
+    cursor: pointer;
+}
+ .new_movie_next{
+    right: 15px;
+}
+.new_movie_back{
+    left: 15px;
+}
+
+.reset:hover{
+    background-color: rgba(128, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.reset{
+    right: 15px;
+}
+
+#navbar{z-index: 1;} /* adjusted for the extra images */
+.block, .elem{display:flex;flex-direction: column;}
+.block, .elem, .dot_container, #ticket-btn{margin:auto;}
+.block{padding-bottom: 0px, margin-bottom: 0px;}
+span{font-style: italic; font-weight: normal;}
+#slide1, #slide2{z-index: -1;}
+
+
+
+@media(max-width:1440px){
+	.new_movie_back, .new_movie_next{
+    position: absolute;
+    top: 130%;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+}
+
+.reset{
+    top: 240%;
+    right: 15px;
+    position: absolute;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+}
+}
+
+@media(max-width: 1200px){
+    .new_movie_back, .new_movie_next{
+    position: absolute;
+    top: 120%;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+    }
+    .reset{
+    top: 230%;
+    right: 15px;
+    position: absolute;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+}
+}
+
+@media(max-width: 900px){
+    .reset{
+    top: 210%;
+    right: 15px;
+    position: absolute;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+}
+}
+
+@media(max-width: 780px){
+    .reset{
+    top: 190%;
+    right: 15px;
+    position: absolute;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+}
+}
+
+@media(max-width: 660px){
+    .reset{
+    top: 170%;
+    right: 15px;
+    position: absolute;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+}
+}
+
+@media(max-width: 660px){
+    .reset{
+    top: 170%;
+    right: 15px;
+    position: absolute;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+}
+}
+
+@media(max-width: 550px){
+    .reset{
+    top: 160%;
+    right: 15px;
+    position: absolute;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+}
+}
+
+@media(max-width: 400px){
+    .reset{
+    top: 150%;
+    right: 15px;
+    position: absolute;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+}
+}
+
+@media(max-width: 850px){
+    .new_movie_back, .new_movie_next{
+    position: absolute;
+    top: 110%;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+    }
+
+}
+
+@media(max-width: 600px){
+    .new_movie_back, .new_movie_next{
+    position: absolute;
+    top: 100%;
+    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(00, 00, 00, 0.7);
+    z-index: 0;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: normal;
+    }
+}
+
+
+/* Styling for Page's footer: 2/3rd hidden on mobile */
+#main-footer{
+    background-color:#000000;
+    color:#ffffff;
+    text-align:center;
+    margin-top: 0px;
+    padding-bottom:20px;
+    padding-top: 0px;
+}
+
+/* Remove all the default ul style in footer in each item */
+#main-footer ul{
+    list-style:none;
+    padding:0;
+}

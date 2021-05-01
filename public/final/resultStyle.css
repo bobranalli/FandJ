@@ -1,0 +1,222 @@
+/* Primary page features styling */
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 12px;
+}
+
+.column img {
+    margin-top: 12px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.column img:hover{
+    opacity: 0.7;
+}
+
+/* Styling for page's filtering options */
+#page_head, #filterForm{
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input, select{
+    font-family: inherit;
+    border-radius: 20px;
+    width:max-content;
+    padding:5px;
+}
+
+#filterForm p, input, select, #filterBtn{
+    font-size: 20px;
+}
+
+#filterBtn{
+    border-radius: 25px;
+    border-width: 3px;
+    font-weight: bold;
+    width:max-content;
+    text-align: center;
+}
+
+
+/* Styling for Movie Display + information */
+.cabbage_rating{
+    display: inline;
+}
+.title{
+    font-size: larger;
+}
+.star {
+    width: 25px;
+    height: 25px;
+}
+span{
+    font-weight: bold;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.movie_poster, .info_poster {
+    margin: auto;
+    width: 50%;
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+}
+
+.movie_poster img{
+    border-radius: 20px;
+    width: 90%;
+    padding: 5px;
+}
+
+.poster{
+    margin: auto;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 5px solid #808080;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.list li{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-bottom: 2px dotted rgb(128, 128, 128);
+}
+
+.row img{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+
+
+/* Modal box specifiic Styling */
+.scrollModal{
+    height: 500px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    text-align:justify;
+}
+.modal{
+    display: none;
+    scrollbar-width:none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+}
+.popupWindow{
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    padding-top: 5px;
+    border: 3px solid #808080;
+    width: 50%;
+    border-radius: 25px;
+}
+.modalHead{
+    padding: 10px 15px;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modalHead .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.closeWindow{
+    font-size: 50px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.closeWindow:hover, .closeWindow:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#filteredMovies{
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column{
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .popupWindow{
+        width: 80%;
+        padding: 10px;
+    }
+
+    #page_head {
+        padding-right: 10px;
+        padding-left:10px;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column, .poster {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .movie_poster, .info_poster {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    .movie_poster img{width: 100%;}
+}
+
+/* Borders */
+/* .poster{border: 2px solid red;} */
+/* .specs{border: 1px solid blue;}
+.list{border: 1px solid purple;} */

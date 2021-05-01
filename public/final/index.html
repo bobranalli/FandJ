@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="cabbage, book, movie, rating, genre, app">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">    
+	<link rel="stylesheet" type="text/css" href="cabbagestyles.css">
+    <link rel="shortcut icon" type="image/png" href="CabbageLogo.png">
+ 	<title>Cabbage | Home</title>
+</head>
+<style>
+	#emphasize{
+		color:#FFFFFF; 
+		padding-top: 40px;
+		font-size: 40px;
+	}
+
+	#showcase h2{
+		margin-top: 200px;
+	}
+    .footertitle{
+        padding-top: 50px;
+        font-size: 25px;
+    }
+    .small{
+        font-size: 20px;
+    }
+</style>
+ <script language="javascript">
+        images = ["Slide2.jpg","Slide3.jpg", "Slide4.jpg", "Slide5.jpg"];
+        var imageIndex = 0;
+        
+        images2 = ["Ani1.jpg", "Ani2.jpg", "Ani3.jpg", "Ani4.jpg", "Ani5.jpg", "Ani6.jpg", "Ani7.jpg", "Ani8.jpg", "Ani9.jpg", "Ani10.jpg", "Ani11.jpg", "Ani12.jpg", "Ani13.jpg", "Ani14.jpg", "Ani15.jpg", "Ani16.jpg", "Ani17.jpg", "Ani18.jpg", "Ani19.jpg", "Ani20.jpg", "Ani21.jpg", "Ani22.jpg", "Ani23.jpg", "Ani24.jpg", "Ani25.jpg"]; 
+        var imageIndex2 = 0; 
+
+        $(document).ready(function() {
+            slideShow();
+
+			 window.addEventListener("resize", function(e) {
+    			var mapElement = document.getElementById("ani1");
+   				mapElement.style.height = mapElement.offsetWidth * 1.769;
+			});
+            window.addEventListener("resize", function(e) {
+                var mapElement = document.getElementById("slide1");
+                mapElement.style.height = mapElement.offsetWidth * 1.769;
+            });
+        });
+
+        // immediately start slide show of movies playing
+        function slideShow() {
+            //alert("currslide" + imageIndex2); 
+            $("#ani1 img").fadeIn(0);
+            $("#ani1 img").delay(650).fadeOut(0, nextSlide);
+        }
+
+        // gets next movie poster for slide show
+        function nextSlide() {
+        	imageIndex2++;
+            //alert("nextslide" + imageIndex2);  
+        	if(imageIndex2 == 24){
+        		imageIndex2 = 0;
+                $("#ani1 img").attr("src", "Ani1.jpg");
+                $("#ani1 img").fadeIn(0);
+                $("#ani1 img").delay(650).fadeOut(0, nextSlide); 
+        	} else {
+                $("#ani1 img").attr("src", images2[imageIndex2]);
+                slideShow();
+            }
+           
+        }
+
+
+    </script>
+<body>
+
+	<!--Nav Bar-->
+	<nav id='navbar' class="navbar">
+
+    
+
+
+
+    <!--<label name='hamb' style='padding-right:40px' for='toggle'>&#9776;</label>
+    <input type='checkbox' id='toggle'/>
+    <div class='menu'>-->
+
+    
+    <ul>
+    	<div class="logo">
+    		<li><a href="index.html"><img src = "CabbageLogo.png" height="50"></a></li>
+    	</div>
+    	<div class="texttabs">
+    		<li><a href='tab1.html'>TAB 1</a></li>
+    		<li><a href='tab2.html'>TAB 2</a></li>
+    		<li><a href='tab3.html'>TAB 3</a></li>
+    	</div>
+    </ul></nav>
+
+
+    <section id="showcase">
+    	<div class="container">
+    		<h2 style="color:#000000">Here to provide you with a definitive answer to that age-old question - <div id="emphasize">is the movie anything like the book?</div></h2>
+    		<h1>cabbage.</h1>	
+        </div>
+    </section>
+
+    <div style="padding-bottom: 0px" class="block"> 
+            <div class='elem'>
+                <div id='slide1'>
+                    <img src="Slide2.jpg" width="100%"/>
+                </div> 
+            </div> 
+            <span class="new_movie_back">&#10094;</span>
+            <span class="new_movie_next">&#10095;</span>
+                <script language="javascript">
+                    $('.new_movie_next').on('click', function() {
+                  		imageIndex++;
+                        if(imageIndex == 4){
+                        	imageIndex = 0; 
+                        }
+                        $("#slide1 img").attr("src", images[imageIndex]);
+                    });
+
+                    $('.new_movie_back').on('click', function() {
+                        imageIndex--;
+                        if(imageIndex == -1){
+                        	imageIndex = 3; 
+                        } 
+                        $("#slide1 img").attr("src", images[imageIndex]);
+                    });
+
+
+                </script>
+            </div>
+    </div>
+
+    <div style="padding-top: 0px" class="block"> 
+            <div class='elem'>
+                <div id='ani1'>
+                    <img src="Ani1.jpg" width="100%"/>
+                </div> 
+            </div> 
+                <span class="reset">&#8634;</span>
+                <script language="javascript">
+                    $(".reset").on('click', function(){
+                        imageIndex2 = 0; 
+                        $("#ani1 img").attr("src", "Ani1.jpg");
+                        slideShow(); 
+                    }); 
+                    slideShow(); 
+                </script>
+            </div>
+    </div>
+
+    <footer id="main-footer">
+        <div class="foot-block"><div id="foot-address">
+            <ul>
+                <li class="footertitle"><div class="small">copyright &copy; 2021 </div>cabbage.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--footer-->
+
+
+
+</body>
+</html>
